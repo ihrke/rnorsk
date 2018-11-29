@@ -8,7 +8,8 @@
 #' @format A data frame with 504 rows and 4 variables:
 #' \describe{
 #'   \item{kjønn}{Gender (one of "Menn"-male or "Kvinner"-female)}
-#'   \item{alder}{agegroup (factor)}
+#'   \item{alder}{agegroup, coded are beginning student <18, each year from 19-29 separately, 30-34 and >35}
+#'   \item{alder_grov}{agegroup, coded are only <18, 19-29 and >30}
 #'   \item{år}{year}
 #'   \item{studenter}{number of new students}
 #' }
