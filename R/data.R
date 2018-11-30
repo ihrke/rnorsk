@@ -31,5 +31,27 @@
 #' @source \url{}
 "studentHeights"
 
-
+#' Single-trial responses from a Stroop task (85 subjs).
+#'
+#' A dataset containing individual responses (RT/accuracy) from
+#' 85 individuals completing a standard Stroop-task.
+#' Raw data and description available at https://osf.io/kxpqu/.
+#'
+#'
+#' @format A data frame with 49309 rows and 9 variables:
+#' \describe{
+#'   \item{subj}{subject ID}
+#'   \item{trial}{trial number in experiment}
+#'   \item{color}{color of the presented word}
+#'   \item{condition}{one of "neutral" (the presented word was XXXXX), "congruent" (the meaning of the presented
+#'   word was identical to the color of the word) and "incongruent" (the meaning of the word was a different color than the
+#'   print color of the stimulus)}
+#'   \item{correct}{whether the response was correct}
+#'   \item{response}{the color indicated by the participant (by button press)}
+#'   \item{RT}{reaction time (in sec) between presentation of the stimulus and the response}
+#'   \item{age}{participants age at time of data-acquisition}
+#'   \item{female}{indicator variable (1=female, 0=male)}
+#' }
+#' @source \url{https://osf.io/kxpqu/}
+"stroop"
 
