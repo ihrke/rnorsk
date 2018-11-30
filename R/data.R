@@ -15,4 +15,21 @@
 #' @source \url{https://www.ssb.no/}
 "nyeStudenter"
 
+#' Body-height in cm collected from a statistics course at a norwegian university
+#' across three years.
+#'
+#' A dataset containing individual body heights along with a variable for gender and year
+#' in which the data was collected.
+#'
+#'
+#' @format A data frame with 99 rows and 3 variables:
+#' \describe{
+#'   \item{kjønn}{Gender (one of "mann"-male or "kvinne"-female)}
+#'   \item{år}{year}
+#'   \item{høyde}{body height in cm}
+#' }
+#' @source \url{}
+"studentHeights"
+
+
 
