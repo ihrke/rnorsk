@@ -13,4 +13,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Imports: 
     httr,
-    rjstat
+    rjstat,
+    ggplot2
