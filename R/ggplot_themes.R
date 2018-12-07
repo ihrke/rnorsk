@@ -15,3 +15,12 @@ theme_spss <- function(base_family = "Helvetica") {
         panel.grid = ggplot2::element_blank(),
         aspect.ratio = 1)
 }
+
+#' Theme used for RNorsk-book.
+#'
+#'
+#' @return A ggplot-theme that can be added to ggplot-objects.
+#' @examples
+theme_rnorsk <- function(...){
+  ggplot2::theme_bw(...)
+}
