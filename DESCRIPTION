@@ -17,4 +17,5 @@ Imports:
     httr,
     rjstat,
     ggplot2
-
+URL: https://github.com/ihrke/rnorsk
+BugReports: https://github.com/ihrke/rnorsk/issues
