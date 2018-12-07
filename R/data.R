@@ -55,3 +55,38 @@
 #' @source \url{https://osf.io/kxpqu/}
 "stroop"
 
+#' Prices of apartments in 2013, Trondheim, Norway.
+#'
+#' Datasettet inneholder informasjon om 95 leiligheter som var til salgs i første halvdel av 2013 i Trondheim.
+#' Denne informasjonen omfatter pris, størrelse, beliggenhet, byggeår og miljømerking angående leilighetene.
+#'
+#' @format A data frame with 95 rows and 6 variables:
+#' \describe{
+#'   \item{pris}{price in NOK}
+#'   \item{pris2}{??}
+#'   \item{beliggenhet}{location coded as 1,2,3 or 4 (??)}
+#'   \item{størrelse}{size of appartment (sqm)}
+#'   \item{byggeår}{year when built}
+#'   \item{miljømerking}{environmental score (1,2 or 3)}
+#' }
+#' @source
+"leilighet"
+
+#' Price of birthday presents.
+#'
+#' Datasettet inneholder 20 observasjoner og 4 variabler. Den første variabelen er `gave_verdi` som representerer
+#' antall kroner en brukte på en bursdagsgave til partneren sin sist. De andre to variablene heter `attraktiv`og
+#' `snill` som henholdsvis måler hvor attraktiv og snill en vurderer sin partner på en skala 1 til 7.
+#' Til slutt, har vi variabelen `alder` som viser respondentens alder.
+#'
+#'
+#' @format A data frame with 20 rows and 4 variables:
+#' \describe{
+#'   \item{gave_verdi}{price in NOK}
+#'   \item{attraktiv}{score for how attractive the partner was judged to be (1-7)}
+#'   \item{snill}{score for how kind the partner was judged to be (1-7)}
+#'   \item{alder}{age in years}
+#' }
+#' @source
+"gave"
+
