@@ -90,3 +90,18 @@
 #' @source
 "gave"
 
+#' Number of deaths in Norway by age in single-year bins.
+#'
+#' A dataset containing the number of deaths in Norway in 2017 by year.
+#' The data was downloaded from Det Statistiske Sentralbyrå (Statistics
+#' Norway) https://www.ssb.no/.
+#'
+#'
+#' @format A data frame with 106 rows and 2 variables:
+#' \describe{
+#'   \item{alder}{age numeric in years}
+#'   \item{døde}{antall deaths in Norway in 2017}
+#' }
+#' @source \url{https://www.ssb.no/}
+"døde"
+
