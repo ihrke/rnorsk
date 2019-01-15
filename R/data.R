@@ -105,3 +105,26 @@
 #' @source \url{https://www.ssb.no/}
 "døde"
 
+
+#' Basic bio data on athletes and medal results from Summer Games in Rio 2016.
+#'
+#'
+#'
+#' @format A data frame with 13688 rows and 12 variables:
+#' \describe{
+#' \item{ID}{Unique number for each athlete}
+#' \item{Name}{Athlete's name}
+#' \item{Sex}{M or F}
+#' \item{Age{Integer in years}
+#' \item{Height}{In centimeters}
+#' \item{Weight}{In kilograms}
+#' \item{Team}{Team name}
+#' \item{NOC}{National Olympic Committee 3-letter code}
+#' \item{Games}{Year and season}
+#' \item{Sport}{Sport}
+#' \item{Event}{Event}
+#' \item{Medal}{Gold, Silver, Bronze, or NA}
+#' }
+#' @source \url{https://www.kaggle.com/heesoo37/olympic-history-data-a-thorough-analysis/data}
+"olympic"
+
