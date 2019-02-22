@@ -128,3 +128,31 @@
 #' @source \url{https://www.kaggle.com/heesoo37/olympic-history-data-a-thorough-analysis/data}
 "olympic"
 
+
+
+#' Titanic Passenger Survival Data Set.
+#' This dataset has been re-packaged for convenience from
+#' https://github.com/paulhendricks/titanic
+#'
+#' @format A data frame with 1309 rows and 12 variables:
+#' @source https://www.kaggle.com/c/titanic/data
+#' \describe{
+#' \item{PassengerId}{Passenger ID}
+#' \item{Survived}{Passenger Survival Indicator}
+#' \item{Pclass}{Passenger Class}
+#' \item{Name}{Name}
+#' \item{Sex}{Sex}
+#' \item{Age}{Age}
+#' \item{SibSp}{Number of Siblings/Spouses Aboard}
+#' \item{Parch}{Number of Parents/Children Aboard}
+#' \item{Ticket}{Ticket Number}
+#' \item{Fare}{Passenger Fare}
+#' \item{Cabin}{Cabin}
+#' \item{Embarked}{Port of Embarkation}
+#' }
+"titanic"
+
+
+
+
+
