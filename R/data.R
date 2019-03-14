@@ -152,6 +152,13 @@
 #' }
 "titanic"
 
+#' List of all R-packages that are used in the book.
+#'
+#' @format A character vector
+#' \describe{
+#' }
+"rnorsk.all.used.packages"
+
 
 
 
