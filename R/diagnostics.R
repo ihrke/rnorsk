@@ -51,6 +51,9 @@ regression.diagnostics <-
            crit.cook = 1.00,
            crit.outlier = 0.05,
            crit.dwt = 0.05) {
+    if(!is.element(class(mod), "lm")){
+      stop("need 'lm' object")
+    }
     bp.obj = lmtest::bptest(mod)
     bp.res = with(
       bp.obj,
@@ -81,7 +84,7 @@ regression.diagnostics <-
       )
     )
 
-    if(length(coef(mod))>2){
+    if (length(coef(mod)) > 2) {
       vif.obj = car::vif(mod)
       vif.res = tibble::tibble(
         assumption = "multicollinearity",
@@ -95,12 +98,12 @@ regression.diagnostics <-
       )
     } else {
       # VIF not defined for models with only one variable
-      vif.obj=NULL
-      vif.res=list(
+      vif.obj = NULL
+      vif.res = list(
         assumption = "multicollinearity",
         test = "Variance Inflation Factor",
         label = "vif",
-        problem=F
+        problem = F
       )
     }
 
@@ -223,13 +226,13 @@ as.data.frame.regression.diagnostics <- function(x) {
 }
 
 print.regression.diagnostics <- function(res) {
-  good=crayon::combine_styles("green", "bold")
-  ok=crayon::combine_styles("orange", "bold")
-  problem=crayon::combine_styles("red", "bold")
-  header=crayon::combine_styles("cyan", "underline")
+  good = crayon::combine_styles("green", "bold")
+  ok = crayon::combine_styles("orange", "bold")
+  problem = crayon::combine_styles("red", "bold")
+  header = crayon::combine_styles("cyan", "underline")
 
   `%>%` <- magrittr::`%>%`
-  if(is.installed("emo")){
+  if (is.installed("emo")) {
     decision.label = function(sig) {
       ifelse(sig, emo::ji("-1"), emo::ji("+1"))
     }
@@ -242,23 +245,32 @@ print.regression.diagnostics <- function(res) {
 
   cat("Tests of linear model assumptions\n")
   cat("---------------------------------\n\n")
-  perc.failed=(sum(tab$problem)/dim(tab)[1])*100
-  if(perc.failed<1){
-    style=good
-  } else if( perc.failed < 30 ){
-    style=ok
+  perc.failed = (sum(tab$problem) / dim(tab)[1]) * 100
+  if (perc.failed < 1) {
+    style = good
+  } else if (perc.failed < 30) {
+    style = ok
   } else {
-    style=problem
+    style = problem
   }
-  cat(sprintf(style("%i/%i (%.1f %%) checks failed\n\n"), sum(tab$problem), dim(tab)[1], perc.failed))
+  cat(sprintf(
+    style("%i/%i (%.1f %%) checks failed\n\n"),
+    sum(tab$problem),
+    dim(tab)[1],
+    perc.failed
+  ))
   cat("\n")
   cat(header("Identified problems: "))
-  if(perc.failed==0){
+  if (perc.failed == 0) {
     cat(good("NONE\n"))
   } else {
-    problems=unique(tab$assumption[tab$problem])
+    problems = unique(tab$assumption[tab$problem])
     cat("\n")
-    cat(problem(paste(sprintf("\t%s",problems), sep="\n", collapse = "\n")))
+    cat(problem(paste(
+      sprintf("\t%s", problems),
+      sep = "\n",
+      collapse = "\n"
+    )))
     cat("\n")
   }
   cat(header("Summary:\n"))
@@ -273,19 +285,21 @@ print.regression.diagnostics <- function(res) {
 
   cat("\nOutliers:\n")
   cat("-----------\n")
-  cook.ix=which(tab$label=="cook")
-  cat(header(sprintf("Cook's distance (criterion=%.2f):", tab[cook.ix, "crit"])))
-  if(!tab$problem[cook.ix]){
+  cook.ix = which(tab$label == "cook")
+  cat(header(sprintf(
+    "Cook's distance (criterion=%.2f):", tab[cook.ix, "crit"]
+  )))
+  if (!tab$problem[cook.ix]) {
     cat(good(" No outliers\n"))
   } else {
-    s=sort(res$test.objs[["cook"]])
-    outliers=s[s>tab$crit[cook.ix]]
+    s = sort(res$test.objs[["cook"]])
+    outliers = s[s > tab$crit[cook.ix]]
     cat("\n")
-    print(data.frame(index=names(outliers),cooksd=outliers), row.names = F)
+    print(data.frame(index = names(outliers), cooksd = outliers), row.names = F)
   }
-  outlier.ix=which(tab$label=="outlier")
+  outlier.ix = which(tab$label == "outlier")
   cat(header(sprintf("Outlier test (criterion=%.2f):", tab[outlier.ix, "crit"])))
-  if(!tab$problem[outlier.ix]){
+  if (!tab$problem[outlier.ix]) {
     cat(good(" No outliers\n"))
   } else {
     cat("\n")

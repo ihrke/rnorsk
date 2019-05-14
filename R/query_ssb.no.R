@@ -6,8 +6,6 @@
 #' from
 #' @return A data.frame containing the downloaded data.
 #' @examples
-#' add(1, 1)
-#' add(10, 1)
 get.ssb.dataset <- function(tableid, jsoncode){
   url <- sprintf("https://data.ssb.no/api/v0/no/table/%s", tableid)
   d.tmp <- httr::POST(url, body = jsoncode, encode = "json", httr::verbose())
