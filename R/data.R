@@ -4,7 +4,7 @@
 #' the years 2000-2017. The data was downloaded from Det Statistiske Sentralbyrå (Statistics
 #' Norway) https://www.ssb.no/.
 #'
-#'
+#' @export
 #' @format A data frame with 504 rows and 4 variables:
 #' \describe{
 #'   \item{kjønn}{Gender (one of "Menn"-male or "Kvinner"-female)}
@@ -21,7 +21,7 @@
 #' A dataset containing individual body heights along with a variable for gender and year
 #' in which the data was collected.
 #'
-#'
+#' @export
 #' @format A data frame with 99 rows and 3 variables:
 #' \describe{
 #'   \item{kjønn}{Gender (one of "mann"-male or "kvinne"-female)}
@@ -37,7 +37,7 @@
 #' 85 individuals completing a standard Stroop-task.
 #' Raw data and description available at https://osf.io/kxpqu/.
 #'
-#'
+#' @export
 #' @format A data frame with 49309 rows and 9 variables:
 #' \describe{
 #'   \item{subj}{subject ID}
@@ -60,6 +60,7 @@
 #' Datasettet inneholder informasjon om 95 leiligheter som var til salgs i første halvdel av 2013 i Trondheim.
 #' Denne informasjonen omfatter pris, størrelse, beliggenhet, byggeår og miljømerking angående leilighetene.
 #'
+#' @export
 #' @format A data frame with 95 rows and 6 variables:
 #' \describe{
 #'   \item{pris}{price in NOK}
@@ -79,7 +80,7 @@
 #' `snill` som henholdsvis måler hvor attraktiv og snill en vurderer sin partner på en skala 1 til 7.
 #' Til slutt, har vi variabelen `alder` som viser respondentens alder.
 #'
-#'
+#' @export
 #' @format A data frame with 20 rows and 4 variables:
 #' \describe{
 #'   \item{gave_verdi}{price in NOK}
@@ -96,7 +97,7 @@
 #' The data was downloaded from Det Statistiske Sentralbyrå (Statistics
 #' Norway) https://www.ssb.no/.
 #'
-#'
+#' @export
 #' @format A data frame with 106 rows and 2 variables:
 #' \describe{
 #'   \item{alder}{age numeric in years}
@@ -109,7 +110,7 @@
 #' Basic bio data on athletes and medal results from Summer Games in Rio 2016.
 #'
 #'
-#'
+#' @export
 #' @format A data frame with 13688 rows and 12 variables:
 #' \describe{
 #' \item{ID}{Unique number for each athlete}
@@ -134,6 +135,7 @@
 #' This dataset has been re-packaged for convenience from
 #' https://github.com/paulhendricks/titanic
 #'
+#' @export
 #' @format A data frame with 1309 rows and 12 variables:
 #' @source https://www.kaggle.com/c/titanic/data
 #' \describe{
@@ -154,6 +156,7 @@
 
 #' List of all R-packages that are used in the book.
 #'
+#' @export
 #' @format A character vector
 #' \describe{
 #' }

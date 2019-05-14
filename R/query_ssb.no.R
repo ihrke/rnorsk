@@ -1,5 +1,6 @@
 #' Download data from statistisk sentralbyrå (statistics norway).
 #'
+#' @export
 #' @param tableid ID of an SSB table (as string).
 #' @param jsoncode JSON code describing the desired selection from the table. This code can be obtained
 #' from

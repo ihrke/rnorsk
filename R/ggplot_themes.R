@@ -4,6 +4,7 @@
 #' https://twitter.com/vuorre/status/700867902463868928
 #' https://gist.githubusercontent.com/mvuorre/bb1e3e412cfa88590f97/raw/a2fe56c2b1d07ebde29af0cf7cd071dc329840c5/theme_spss.R
 #'
+#' @export
 #' @param base_family Font family used
 #' @return A ggplot-theme that can be added to ggplot-objects.
 #' @examples
@@ -19,6 +20,7 @@ theme_spss <- function(base_family = "Helvetica") {
 #' Theme used for RNorsk-book.
 #'
 #'
+#' @export
 #' @return A ggplot-theme that can be added to ggplot-objects.
 #' @examples
 theme_rnorsk <- function(...){
