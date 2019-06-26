@@ -28,7 +28,6 @@
 #'   \item{år}{year}
 #'   \item{høyde}{body height in cm}
 #' }
-#' @source \url{}
 "studentHeights"
 
 #' Single-trial responses from a Stroop task (85 subjs).

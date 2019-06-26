@@ -225,6 +225,8 @@ as.data.frame.regression.diagnostics <- function(x) {
   return(as.data.frame(x$diagnostic.table))
 }
 
+#'
+#' @export
 print.regression.diagnostics <- function(res) {
   good = crayon::combine_styles("green", "bold")
   ok = crayon::combine_styles("orange", "bold")
