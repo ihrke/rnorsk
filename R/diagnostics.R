@@ -331,24 +331,20 @@ print.regression.diagnostics <- function(res) {
 # gamlss() models have been (minimally) tested.
 ##
 linkTest <- function(model) {
-  e <- pryr::where(deparse(substitute(model)))
-  cc <- class(model)[[1]]
   # Define variables for predicted values using names not likely to
   # conflict with other names in the environment of model
-  .predicted <- predict(model)
-  `.predicted^2` <- .predicted ^ 2
+  predicted <- predict(model)
+  predicted_sq <- predicted ^ 2
   # Check to see that the predicted and predicted^2 variable actually
   # vary.
-  if (round(var(.predicted), digits = 2) == 0) {
+  if (round(var(predicted), digits = 2) == 0) {
     stop("No parameters that vary. Cannot perform test.")
   }
   # The variables need to be found in the environment of model for
   # the update() call to work.
-  assign('predicted', .predicted, envir = e)
-  assign('predicted_sq', `.predicted^2`, envir = e)
-  model <- update(model, . ~ predicted + predicted_sq)
-  # Clean up
-  rm(predicted, envir = e)
-  rm(predicted_sq, envir = e)
+  dat=data.frame(dv=model.frame(model)[,1],
+                 predicted,
+                 predicted_sq)
+  model = lm(dv ~ predicted + predicted_sq, data=dat)
   model
 }
