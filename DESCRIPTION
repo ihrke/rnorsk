@@ -1,13 +1,14 @@
 Package: rnorsk
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Package accompagnying the book "Statistisk dataanalyse med R"
 Version: 0.1.0
 Authors@R: as.person(c(
     "Matthias Mittner <matthias.mittner@uit.no> [aut, cre]", 
     "Mehmet Mehmetoglu <mehmet.mehmetoglu@ntnu.no> [aut]"
   ))
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: This packages is the companion package to our book "Statistiskk dataanalyse med R.
+    All datasets used in the book are included in this package. In addition, the package
+    contains several convenience functions that are used in the book.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

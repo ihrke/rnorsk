@@ -1,20 +1,30 @@
-# rnorsk
+---
+output: github_document
+---
 
-The goal of rnorsk is to ...
+# rnorsk <img src="inst/extdata/rnorskhex.png" align="right" alt="" width="120" />
+
+This packages is the companion package to our book "Statistiskk dataanalyse med R".
+
+All datasets used in the book are included in this package. In addition, the package
+contains several convenience functions that are used in the book.
 
 ## Installation
 
-You can install the released version of rnorsk from [CRAN](https://CRAN.R-project.org) with:
+You can install the package from github using
 
 ``` r
-install.packages("rnorsk")
+#install.packages("devtools")
+devtools::install_github("ihrke/rnorsk")
 ```
 
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+In order to run the example codes from the book, you can use the following to install all 
+packages used in the book.
 
 ``` r
-## basic example code
+library(rnorsk)
+install.packages(rnorsk.all.used.packages)
 ```
 
