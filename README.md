@@ -1,8 +1,6 @@
----
-output: github_document
----
-
 # rnorsk <img src="inst/extdata/rnorskhex.png" align="right" alt="" width="120" />
+
+[Homepage](https://ihrke.github.io/rnorsk/)
 
 This packages is the companion package to our book "Statistiskk dataanalyse med R".
 

@@ -2,10 +2,10 @@ Package: rnorsk
 Type: Package
 Title: Package accompagnying the book "Statistisk dataanalyse med R"
 Version: 0.1.0
-Authors@R: as.person(c(
-    "Matthias Mittner <matthias.mittner@uit.no> [aut, cre]", 
-    "Mehmet Mehmetoglu <mehmet.mehmetoglu@ntnu.no> [aut]"
-  ))
+Authors@R: c(person("Mittner", "Matthias", , "matthias.mittner@uit.no", role = c("aut", "cre"), 
+      comment = c(ORCID = "0000-0003-0205-7353")),
+      person("Mehmetoglu", "Mehmet", , "mehmet.mehmetoglu@ntnu.no", role = c("aut"), 
+      comment = c(ORCID = "0000-0002-6092-8551")))
 Description: This packages is the companion package to our book "Statistiskk dataanalyse med R.
     All datasets used in the book are included in this package. In addition, the package
     contains several convenience functions that are used in the book.
