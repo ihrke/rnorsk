@@ -162,6 +162,3 @@
 "rnorsk.all.used.packages"
 
 
-
-
-
