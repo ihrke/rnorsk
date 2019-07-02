@@ -1,0 +1,15 @@
+citHeader("To cite rnorsk in publications use:")
+
+citEntry(entry = "book",
+  title        = "Statistisk dataanalyse med R",
+  author       = personList(as.person("Mehmet Mehmetoglu"),
+                   as.person("Matthias Mittner")),
+  year         = "2019",
+  url          = "",
+  publisher = "Universitetsforlage",
+  textVersion  =
+  paste("Mehmet Mehmetoglu and Matthias Mittner (2019).",
+        "Statistisk dataanalyse med R",
+        "Universitetsforlaget.",
+        "URL http://")
+)
