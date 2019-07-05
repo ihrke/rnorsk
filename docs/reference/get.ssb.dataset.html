@@ -39,7 +39,19 @@
 
 <meta property="og:title" content="Download data from statistisk sentralbyrå (statistics norway). — get.ssb.dataset" />
 
-<meta property="og:description" content="Download data from statistisk sentralbyrå (statistics norway)." />
+<meta property="og:description" content="To download a specific table from SSB, go to
+https://www.ssb.no/statbank
+and select an area of interest. For example pick
+&quot;Utdanning&quot; -&amp;gt; &quot;Høyere Utdanning&quot; -&amp;gt; &quot;Studenter i høyere utdanning&quot;
+You are going to get a list of related tables, each with a
+table identifier. Select the one you want to access, for example
+&quot;05576	Studenter i høyere utdanning i Norge. Kjønn og fagfelt&quot;
+In the next window, select the cases and variables you are interested in.
+On the next page, scroll all the way down to &quot;API spørring for denne tabellen&quot;.
+Copy the JSON code that pops up when clicking on this link and paste it
+into an R-script file as a string using single quotes (') as a string
+declaration because the JSON string contains double quotes (&quot;).
+See example for details." />
 
 <meta property="og:image" content="/logo.png" />
 <meta name="twitter:card" content="summary" />
@@ -115,7 +127,19 @@
 
     <div class="ref-description">
     
-    <p>Download data from statistisk sentralbyrå (statistics norway).</p>
+    <p>To download a specific table from SSB, go to
+https://www.ssb.no/statbank
+and select an area of interest. For example pick
+"Utdanning" -&gt; "Høyere Utdanning" -&gt; "Studenter i høyere utdanning"
+You are going to get a list of related tables, each with a
+table identifier. Select the one you want to access, for example
+"05576	Studenter i høyere utdanning i Norge. Kjønn og fagfelt"
+In the next window, select the cases and variables you are interested in.
+On the next page, scroll all the way down to "API spørring for denne tabellen".
+Copy the JSON code that pops up when clicking on this link and paste it
+into an R-script file as a string using single quotes (') as a string
+declaration because the JSON string contains double quotes (").
+See example for details.</p>
     
     </div>
 
@@ -140,6 +164,53 @@ from</p></td>
     <p>A data.frame containing the downloaded data.</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'>
+<span class='no'>tableid</span><span class='kw'>=</span><span class='st'>"05576"</span>
+<span class='no'>jsoncode</span><span class='kw'>=</span><span class='st'>'
+{
+"query": [
+  {
+    "code": "Kjonn",
+    "selection": {
+      "filter": "item",
+      "values": [
+        "1",
+        "2"
+        ]
+    }
+  },
+  {
+    "code": "Fagfelt",
+    "selection": {
+      "filter": "item",
+      "values": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+        ]
+    }
+  }
+  ],
+"response": {
+  "format": "json-stat2"
+ }
+ }'</span>
+<span class='no'>data</span><span class='kw'>=</span><span class='fu'>get.ssb.dataset</span>(<span class='no'>tableid</span>, <span class='no'>jsoncode</span>)</div><div class='output co'>#&gt; </div><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/print'>print</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/head'>head</a></span>(<span class='no'>data</span>))</div><div class='output co'>#&gt;   kjønn      fagfelt statistikkvariabel   år value
+#&gt; 1  Menn Allmenne fag          Studenter 2000   154
+#&gt; 2  Menn Allmenne fag          Studenter 2001     9
+#&gt; 3  Menn Allmenne fag          Studenter 2002   110
+#&gt; 4  Menn Allmenne fag          Studenter 2003   147
+#&gt; 5  Menn Allmenne fag          Studenter 2004  1119
+#&gt; 6  Menn Allmenne fag          Studenter 2005  1207</div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -147,7 +218,9 @@ from</p></td>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>
