@@ -161,4 +161,16 @@
 #' }
 "rnorsk.all.used.packages"
 
-
+#' Data from a survey in a fitness center in Trondheim.
+#'
+#' @format A data frame with 210 rows and 6 variables:
+#' @source
+#' \describe{
+#' \item{ttimer}{self-reported number of hours with training per week}
+#' \item{kjønn}{sex (0=female, 1=male)}
+#' \item{alder}{age in years}
+#' \item{utdann}{education (1=secondary/high, 2=university, 3=more than university)}
+#' \item{sivsta}{civil status (0=married, 1=unmarried)}
+#' \item{helse}{self-reported importance of health (0=Not important at all - 6=Very important)}
+#' }
+"trening"
