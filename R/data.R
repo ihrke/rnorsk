@@ -64,7 +64,7 @@
 #' \describe{
 #'   \item{pris}{price in NOK}
 #'   \item{pris2}{??}
-#'   \item{beliggenhet}{location coded as 1,2,3 or 4 (??)}
+#'   \item{beliggenhet}{location coded as 1,2,3 or 4 (1=centrum, 2=south, 3=west, 4=east)}
 #'   \item{størrelse}{size of appartment (sqm)}
 #'   \item{byggeår}{year when built}
 #'   \item{miljømerking}{environmental score (1,2 or 3)}
@@ -175,7 +175,7 @@
 #' }
 "trening"
 
-#' Data from 6 Questions from a survey in a fitness center in Trondheim.
+#' Data from 6 Questions from a survey in a fitness center in Trondheim (2014).
 #' Questions were of the form "I am training ..."
 #'
 #' @format A data frame with 246 rows and 6 variables:
