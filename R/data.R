@@ -174,3 +174,18 @@
 #' \item{helse}{self-reported importance of health (0=Not important at all - 6=Very important)}
 #' }
 "trening"
+
+#' Data from 6 Questions from a survey in a fitness center in Trondheim.
+#' Questions were of the form "I am training ..."
+#'
+#' @format A data frame with 246 rows and 6 variables:
+#' @source
+#' \describe{
+#' \item{Var1}{to help manage stress (1=not important at all - 6=very important)}
+#' \item{Var2}{to release tension (1=not important at all - 6=very important)}
+#' \item{Var3}{to mentally relax (1=not important at all - 6=very important)}
+#' \item{Var4}{to have a good body (1=not important at all - 6=very important)}
+#' \item{Var5}{to improve my appearance (1=not important at all - 6=very important)}
+#' \item{Var6}{to look more attractive (1=not important at all - 6=very important)}
+#' }
+"trening3"
