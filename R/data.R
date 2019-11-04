@@ -1,15 +1,15 @@
 #' Number of new students in Norway by year, age and gender
 #'
 #' A dataset containing the number of new students in Norway by year, age and gender for
-#' the years 2000-2017. The data was downloaded from Det Statistiske Sentralbyrå (Statistics
+#' the years 2000-2017. The data was downloaded from Det Statistiske Sentralbyraa (Statistics
 #' Norway) https://www.ssb.no/.
 #'
 #'
 #' @format A data frame with 504 rows and 4 variables:
 #' \describe{
-#'   \item{kjønn}{Gender (one of "Menn"-male or "Kvinner"-female)}
+#'   \item{kjoenn}{Gender (one of "Menn"-male or "Kvinner"-female)}
 #'   \item{alder}{agegroup, coded are <18, 19-29 and >30}
-#'   \item{år}{year}
+#'   \item{aar}{year}
 #'   \item{studenter}{number of new students}
 #' }
 #' @source \url{https://www.ssb.no/}
@@ -24,9 +24,9 @@
 #'
 #' @format A data frame with 99 rows and 3 variables:
 #' \describe{
-#'   \item{kjønn}{Gender (one of "mann"-male or "kvinne"-female)}
-#'   \item{år}{year}
-#'   \item{høyde}{body height in cm}
+#'   \item{kjoenn}{Gender (one of "mann"-male or "kvinne"-female)}
+#'   \item{aar}{year}
+#'   \item{hoeyde}{body height in cm}
 #' }
 "studentHeights"
 
@@ -56,8 +56,8 @@
 
 #' Prices of apartments in 2013, Trondheim, Norway.
 #'
-#' Datasettet inneholder informasjon om 95 leiligheter som var til salgs i første halvdel av 2013 i Trondheim.
-#' Denne informasjonen omfatter pris, størrelse, beliggenhet, byggeår og miljømerking angående leilighetene.
+#' Datasettet inneholder informasjon om 95 leiligheter som var til salgs i foerste halvdel av 2013 i Trondheim.
+#' Denne informasjonen omfatter pris, stoerrelse, beliggenhet, byggeaar og miljoemerking angaaende leilighetene.
 #'
 #'
 #' @format A data frame with 95 rows and 6 variables:
@@ -65,18 +65,18 @@
 #'   \item{pris}{price in NOK}
 #'   \item{pris2}{??}
 #'   \item{beliggenhet}{location coded as 1,2,3 or 4 (1=centrum, 2=south, 3=west, 4=east)}
-#'   \item{størrelse}{size of appartment (sqm)}
-#'   \item{byggeår}{year when built}
-#'   \item{miljømerking}{environmental score (1,2 or 3)}
+#'   \item{stoerrelse}{size of appartment (sqm)}
+#'   \item{byggeaar}{year when built}
+#'   \item{miljoemerking}{environmental score (1,2 or 3)}
 #' }
 #' @source
 "leilighet"
 
 #' Price of birthday presents.
 #'
-#' Datasettet inneholder 20 observasjoner og 4 variabler. Den første variabelen er `gave_verdi` som representerer
-#' antall kroner en brukte på en bursdagsgave til partneren sin sist. De andre to variablene heter `attraktiv`og
-#' `snill` som henholdsvis måler hvor attraktiv og snill en vurderer sin partner på en skala 1 til 7.
+#' Datasettet inneholder 20 observasjoner og 4 variabler. Den foerste variabelen er `gave_verdi` som representerer
+#' antall kroner en brukte paa en bursdagsgave til partneren sin sist. De andre to variablene heter `attraktiv`og
+#' `snill` som henholdsvis maaler hvor attraktiv og snill en vurderer sin partner paa en skala 1 til 7.
 #' Til slutt, har vi variabelen `alder` som viser respondentens alder.
 #'
 #'
@@ -93,17 +93,17 @@
 #' Number of deaths in Norway by age in single-year bins.
 #'
 #' A dataset containing the number of deaths in Norway in 2017 by year.
-#' The data was downloaded from Det Statistiske Sentralbyrå (Statistics
+#' The data was downloaded from Det Statistiske Sentralbyraa (Statistics
 #' Norway) https://www.ssb.no/.
 #'
 #'
 #' @format A data frame with 106 rows and 2 variables:
 #' \describe{
 #'   \item{alder}{age numeric in years}
-#'   \item{døde}{antall deaths in Norway in 2017}
+#'   \item{doede}{antall deaths in Norway in 2017}
 #' }
 #' @source \url{https://www.ssb.no/}
-"døde"
+"doede"
 
 
 #' Basic bio data on athletes and medal results from Summer Games in Rio 2016.
@@ -167,7 +167,7 @@
 #' @source
 #' \describe{
 #' \item{ttimer}{self-reported number of hours with training per week}
-#' \item{kjønn}{sex (0=female, 1=male)}
+#' \item{kjoenn}{sex (0=female, 1=male)}
 #' \item{alder}{age in years}
 #' \item{utdann}{education (1=secondary/high, 2=university, 3=more than university)}
 #' \item{sivsta}{civil status (0=married, 1=unmarried)}
