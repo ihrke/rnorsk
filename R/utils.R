@@ -28,3 +28,14 @@ create_function_hex <- function(){
                       h_fill="#043e9b",
                       filename = "inst/extdata/functionhex.png")
 }
+
+create_note_hex <- function(){
+  p=ggplot2::ggplot()
+  hexSticker::sticker(p,
+                      package="!",
+                      p_size=36, s_x=1, s_y=.95, s_width=.6,
+                      p_y=1,
+                      h_color="#000000",
+                      h_fill="#ffff6f",
+                      filename = "inst/extdata/notehex.png")
+}
