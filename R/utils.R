@@ -30,11 +30,11 @@ create_function_hex <- function(){
 }
 
 create_note_hex <- function(){
-  p=ggplot2::ggplot()
-  hexSticker::sticker(p,
+  hexSticker::sticker("inst/extdata/empty.png",
                       package="!",
-                      p_size=36, s_x=1, s_y=.95, s_width=.6,
+                      p_size=46, s_x=1, s_y=.95, s_width=.6,
                       p_y=1,
+                      p_color="#0000aa",
                       h_color="#000000",
                       h_fill="#ffff6f",
                       filename = "inst/extdata/notehex.png")
