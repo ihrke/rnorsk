@@ -44,7 +44,7 @@ The list of files can be [accessed here](https://github.com/ihrke/rnorsk/tree/ma
 - **Kapittel 4**: [`kapittel_04-databehandling.R`](https://github.com/ihrke/rnorsk/tree/master/inst/code_examples/kapittel_04-databehandling.R)
 - **Kapittel 5**: [`kapittel_05-visualisering.R`](https://github.com/ihrke/rnorsk/tree/master/inst/code_examples/kapittel_05-visualisering.R)
 - **Kapittel 6**: [`kapittel_06-deskriptiv_statistikk.R`](https://github.com/ihrke/rnorsk/tree/master/inst/code_examples/kapittel_06-deskriptiv_statistikk.R)
-- **Kapittel 7**: [`kapittel_07-lineær_regresjon.R`](https://github.com/ihrke/rnorsk/tree/master/inst/code_examples/kapittel_07-lineær_regresjon.R)
+- **Kapittel 7**: [`kapittel_07-lineaer_regresjon.R`](https://github.com/ihrke/rnorsk/tree/master/inst/code_examples/kapittel_07-lineaer_regresjon.R)
 - **Kapittel 8**: [`kapittel_08-dummy_regresjon.R`](https://github.com/ihrke/rnorsk/tree/master/inst/code_examples/kapittel_08-dummy_regresjon.R)
 - **Kapittel 9**: [`kapittel_09-interaksjon_regresjon.R`](https://github.com/ihrke/rnorsk/tree/master/inst/code_examples/kapittel_09-interaksjon_regresjon.R)
 - **Kapittel 10**: [`kapittel_10-logistisk-regresjon.R`](https://github.com/ihrke/rnorsk/tree/master/inst/code_examples/kapittel_10-logistisk-regresjon.R)
